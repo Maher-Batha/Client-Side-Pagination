@@ -1,0 +1,135 @@
+/* ============= GLOBAL CSS =============== */
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #f1f5f8;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  width: 100%;
+}
+@media (min-width: 539px) {
+  .container {
+    width: 520px;
+  }
+}
+@media (min-width: 767px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 991px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+@media (min-width: 1440px) {
+  .container {
+    width: 1400px;
+  }
+}
+.application {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.application .container .title {
+  font-size: 3.5rem;
+  text-transform: capitalize;
+  position: relative;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5rem;
+}
+.application .container .title::after {
+  content: "";
+  position: absolute;
+  bottom: -1rem;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: tomato;
+}
+.application .container .followers {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+.application .container .followers .single-follower-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+.application .container .followers .single-follower-card .image img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+.application .container .followers .single-follower-card h2 {
+  color: gray;
+  text-transform: capitalize;
+  font-size: 1rem;
+}
+.application .container .followers .single-follower-card .btn {
+  padding: 0.4rem 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+  font-weight: 200;
+  background-color: tomato;
+  transition: all 0.3s;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+}
+.application .container .followers .single-follower-card .btn:hover {
+  background-color: rgb(255, 154, 137);
+}
+.application .container .pagination {
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 3rem;
+  list-style: none;
+}
+.application .container .pagination .pagination-number {
+  background: rgb(255, 154, 137);
+  color: #ffffff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.application .container .pagination .pagination-number:hover,
+.application .container .pagination .pagination-number.active {
+  background-color: tomato;
+}
+.application .container .pagination .pagination-controls {
+  color: black;
+  text-transform: capitalize;
+  font-weight: 800;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
